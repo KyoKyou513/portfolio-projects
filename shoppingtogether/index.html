@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e7">
+  <meta name="description" content="Shopping Together：不替你决定，只陪你多看一眼。">
+  <link rel="icon" sizes="32x32" href="assets/deco2/favicon-32.png">
+  <link rel="icon" sizes="48x48" href="assets/deco2/favicon-48.png">
+  <title>Shopping Together｜购物同行</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-companion="unset">
+  <p class="legacy-hint" data-legacy-hint>当前浏览器内核较旧，页面背景与装饰可能显示不全，建议用手机自带浏览器或 Chrome 打开。</p>
+  <script>if (new URLSearchParams(location.search).get('style') === 'a') document.body.classList.add('style-a');</script>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <svg class="ambient-line" viewBox="0 0 1440 900" aria-hidden="true" preserveAspectRatio="none">
+    <path d="M-70 186 C 124 68, 248 314, 438 186 S 750 56, 902 220 S 1190 390, 1512 170" />
+  </svg>
+  <div class="ambient-shape ambient-shape--circle" aria-hidden="true"></div>
+  <div class="ambient-shape ambient-shape--dots" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <button class="brand" type="button" data-view-target="welcome" aria-label="回到首页">
+      <span class="brand__mark brand__mark--logo" aria-hidden="true"><img src="assets/deco2/st-logo.png" alt=""></span>
+      <span><strong class="brand__word"><img src="assets/deco2/wordmark.svg" alt=""><span>Shopping Together</span></strong><small>购物同行</small></span>
+    </button>
+
+    <nav class="site-nav" aria-label="主要导航">
+      <button type="button" data-view-target="shop">逛一逛</button>
+      <button type="button" data-view-target="records">小票记录</button>
+    </nav>
+
+    <button class="header-records" type="button" data-view-target="records" aria-label="小票记录" title="小票记录"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></button>
+
+    <button class="header-cart" type="button" data-cart-toggle aria-label="打开购物车">
+      <span>购物车</span>
+      <b data-cart-count>0</b>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="view welcome-view is-active" data-view="welcome" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A quiet companion for everyday choices</p>
+        <h1 id="welcome-title">今天想一起<br>逛点什么？</h1>
+        <p class="hero-copy__lead">不替你决定，只陪你多看一眼。</p>
+        <p class="hero-copy__note">这是一个完全本地运行的虚拟商超。商品、规则和回应都可追溯，也可以随时选择“无搭子”。</p>
+        <button class="primary-button" type="button" data-scroll-to-picker>先选一位搭子</button>
+      </div>
+      <div class="hero-art" aria-label="厘厘、念念和芽芽三位购物搭子">
+        <div class="hero-art__halo" aria-hidden="true"></div>
+        <img src="assets/trio.webp" alt="厘厘拿着算盘，念念拿着笔记本，芽芽拿着薯片袋">
+        <span class="hero-art__caption">稳稳算一算 · 轻轻记一笔 · 大胆试一口</span>
+        <img class="hero-branch" src="assets/deco2/branch-bend.png" alt="" aria-hidden="true">
+      </div>
+
+      <div class="onboarding" data-picker>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 01</p>
+            <h2>今天和谁一起逛？</h2>
+          </div>
+          <p>只决定谁陪你看，不决定你该买什么。</p>
+        </div>
+
+        <div class="companion-grid" role="radiogroup" aria-label="选择购物搭子">
+          <button class="companion-card companion-card--lili" type="button" data-pick-companion="lili" role="radio" aria-checked="false">
+            <span class="companion-card__art"><img src="assets/lili.webp" alt="厘厘"></span>
+            <span class="companion-card__copy"><strong>厘厘</strong><small>把价格、容量与差别摊开</small><em>精明与比较</em></span>
+          </button>
+          <button class="companion-card companion-card--niannian" type="button" data-pick-companion="niannian" role="radio" aria-checked="false">
+            <span class="companion-card__art"><img src="assets/niannian.webp" alt="念念"></span>
+            <span class="companion-card__copy"><strong>念念</strong><small>替今天的生活多惦记一点</small><em>细节与记挂</em></span>
+          </button>
+          <button class="companion-card companion-card--yaya" type="button" data-pick-companion="yaya" role="radio" aria-checked="false">
+            <span class="companion-card__art"><img src="assets/yaya.webp" alt="芽芽"></span>
+            <span class="companion-card__copy"><strong>芽芽</strong><small>对新口味先亮起眼睛</small><em>好奇与尝鲜</em></span>
+          </button>
+          <button class="companion-card companion-card--none" type="button" data-pick-companion="none" role="radio" aria-checked="false">
+            <span class="none-mark" aria-hidden="true"></span>
+            <span class="companion-card__copy"><strong>今天自己逛</strong><small>保留购物车与记录，关闭搭子回应</small><em>无搭子模式</em></span>
+          </button>
+        </div>
+
+        <div class="purpose-panel">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Step 02</p><h2>今天为什么来逛？</h2></div>
+            <p>最多选两项，也可以先随便看看。</p>
+          </div>
+          <div class="purpose-chips" aria-label="购物目的"></div>
+          <img class="purpose-flowers" src="assets/deco2/flower-cluster.png" alt="" aria-hidden="true">
+          <div class="budget-row">
+            <img class="purpose-bird" src="assets/deco2/bird-perch.png" alt="" aria-hidden="true">
+            <label for="budget">可选预算</label>
+            <select id="budget" data-budget>
+              <option value="">不设预算</option>
+              <option value="5000">不超过 ¥50</option>
+              <option value="10000">不超过 ¥100</option>
+              <option value="20000">不超过 ¥200</option>
+            </select>
+            <button class="primary-button" type="button" data-enter-shop disabled>和搭子进商超</button>
+          </div>
+          <p class="form-note" data-onboarding-note aria-live="polite">先选一位搭子，或者选择“今天自己逛”。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="view shop-view" data-view="shop" aria-labelledby="shop-title" hidden>
+      <div class="shop-intro">
+        <div><p class="eyebrow">Local shelf · first edition</p><h1 id="shop-title" data-shelf-slogan>不赶时间，只挑心动。</h1></div>
+        <div class="shop-intro__meta"><span data-purpose-summary>先随便看看</span><button type="button" data-change-companion>回首页重选</button></div>
+      </div>
+
+      <div class="category-bar" aria-label="商品分类"></div>
+
+      <div class="shop-layout">
+        <section class="shelf" aria-label="商品货架">
+          <div class="shelf-toolbar">
+            <label><span>排序</span><select data-sort><option value="default">默认顺序</option><option value="price-asc">价格从低到高</option><option value="price-desc">价格从高到低</option></select></label>
+          </div>
+          <div class="product-grid" data-product-grid></div>
+          <div class="shelf-checkout" data-shelf-checkout hidden>
+            <span data-shelf-checkout-summary></span>
+            <button class="primary-button" type="button" data-shelf-checkout-btn>就这样结账</button>
+          </div>
+          <div class="empty-state" data-empty-state hidden><img class="empty-state__bird" src="assets/deco/deco-bird.png" alt="" aria-hidden="true"><h2>这一架暂时空着</h2><p data-empty-state-copy>这一架暂时空着，换一架看看吧。</p></div>
+        </section>
+
+        <aside class="companion-rail" data-companion-rail aria-live="polite">
+          <img class="companion-rail__motif" data-rail-motif src="" alt="" aria-hidden="true" hidden>
+          <div class="companion-rail__portrait"><img data-rail-image src="assets/niannian.webp" alt=""></div>
+          <p class="eyebrow" data-rail-role>当前搭子</p>
+          <h2 class="rail-name-row"><span data-rail-name>还没选搭子</span><img class="rail-seal" data-rail-seal src="" alt="" hidden></h2>
+          <div class="speech-bubble"><p data-companion-message>选好搭子再进来，我会在该说话的时候出现。</p></div>
+          <p class="switch-note" data-switch-note hidden></p>
+          <div class="permission-stack">
+            <button type="button" data-companion-action="look">看看这辆车</button>
+            <button type="button" data-companion-action="compare">帮我挑挑</button>
+            <button type="button" data-companion-action="organize">再帮我理理</button>
+          </div>
+          <div class="switch-row" data-switch-row aria-label="就地换搭子"></div>
+          <small>后两步由你主动授权；搭子不会替你改购物车。</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view records-view" data-view="records" aria-labelledby="records-title" hidden>
+      <div class="records-hero"><img class="records-hero__stems" src="assets/deco2/card-stems.png" alt="" aria-hidden="true"><p class="eyebrow">Only in this browser</p><h1 id="records-title">这台设备上的小票</h1><p>记录只存在当前浏览器里，不是云备份。清除浏览器数据后会消失。</p></div>
+      <section class="second-trip-prompt" data-second-trip-prompt aria-live="polite" hidden>
+        <img class="second-trip-prompt__stars" src="assets/deco/deco-stars.png" alt="" aria-hidden="true">
+        <div><p class="eyebrow">Another quiet trip</p><h2 data-second-trip-copy>要不要换个搭子，再走一程？</h2></div>
+        <button class="primary-button" type="button" data-start-second-trip>再逛一趟</button>
+      </section>
+      <div class="record-list" data-record-list></div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-labelledby="cart-title">
+    <div class="cart-drawer__header"><div><p class="eyebrow">Current cart</p><h2 id="cart-title">今天这辆车</h2></div><img class="cart-drawer__flowers" src="assets/deco2/card-flowers.png" alt="" aria-hidden="true"><button type="button" data-cart-close aria-label="关闭购物车">×</button></div>
+    <div class="cart-items" data-cart-items></div>
+    <div class="cart-summary"><span>合计</span><strong data-cart-total>¥0.00</strong></div>
+    <div class="cart-actions"><button class="secondary-button" type="button" data-save-draft>保存为草稿</button><button class="primary-button" type="button" data-checkout>就这样结账</button></div>
+    <p class="drawer-note">结账不会连接真实支付，也不会上传任何记录。</p>
+  </aside>
+  <button class="drawer-scrim" type="button" data-cart-close aria-label="关闭购物车遮罩" hidden></button>
+
+  <dialog class="checkout-dialog" data-checkout-dialog>
+    <form method="dialog">
+      <button class="dialog-close" value="cancel" aria-label="关闭">×</button>
+      <p class="eyebrow">Checkout mirror</p>
+      <img class="checkout-seal" data-checkout-seal src="" alt="" aria-hidden="true" hidden>
+      <h2>回看今天这辆车</h2>
+      <p class="mirror-byline" data-mirror-byline hidden></p>
+      <div class="checkout-mirror" data-checkout-mirror></div>
+      <fieldset><legend>分享卡可以隐藏</legend><label><input type="checkbox" data-share-price checked> 显示价格</label><label><input type="checkbox" data-share-summary checked> 显示搭子总结</label></fieldset>
+      <menu><button class="secondary-button" value="cancel">再看一圈</button><button class="primary-button" value="confirm" data-confirm-checkout>保存完成记录</button></menu>
+    </form>
+  </dialog>
+
+  <footer><p>Shopping Together · 不替你决定，只陪你多看一眼。</p><p>静态本地原型 · 无外部 API<br><span class="footer-note">建议用手机自带浏览器或 Chrome 打开；部分套壳浏览器（如百度浏览器）会丢失背景与装饰。</span></p></footer>
+
+  <script>
+    /* v0.4.4 老内核探测：不认 color-mix 或 overflow:clip 的内核，背景与装饰会缺件，亮出提示条 */
+    (function () {
+      try {
+        var ok = window.CSS && CSS.supports && CSS.supports("color", "color-mix(in srgb, red, blue)") && CSS.supports("overflow-x", "clip");
+        if (!ok) { var el = document.querySelector("[data-legacy-hint]"); if (el) el.className += " is-on"; }
+      } catch (e) { var el2 = document.querySelector("[data-legacy-hint]"); if (el2) el2.className += " is-on"; }
+    })();
+  </script>
+  <script src="data/products.js"></script>
+  <script src="data/copy-library.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

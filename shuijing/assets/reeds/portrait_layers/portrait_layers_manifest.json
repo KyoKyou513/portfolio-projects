@@ -1,0 +1,82 @@
+[
+  {
+    "layer": "0004",
+    "source": "芦苇（去杂叶）_0004_芦苇（去杂叶）.png",
+    "output": "reed_portrait_back.webp",
+    "size": [
+      818,
+      1454
+    ],
+    "alpha_bbox": [
+      46,
+      973,
+      472,
+      1454
+    ],
+    "bytes": 51522
+  },
+  {
+    "layer": "0003",
+    "source": "芦苇4（竖版）_0003_芦苇4.png",
+    "output": "reed_portrait_mid.webp",
+    "size": [
+      818,
+      1454
+    ],
+    "alpha_bbox": [
+      0,
+      1074,
+      163,
+      1454
+    ],
+    "bytes": 57126
+  },
+  {
+    "layer": "0002",
+    "source": "芦苇2（竖版）_0002_芦苇2.png",
+    "output": "reed_portrait_tall.webp",
+    "size": [
+      818,
+      1454
+    ],
+    "alpha_bbox": [
+      37,
+      1001,
+      329,
+      1454
+    ],
+    "bytes": 65050
+  },
+  {
+    "layer": "0001",
+    "source": "芦苇6（竖版）_0001_芦苇6.png",
+    "output": "reed_portrait_short.webp",
+    "size": [
+      818,
+      1454
+    ],
+    "alpha_bbox": [
+      83,
+      1332,
+      307,
+      1454
+    ],
+    "bytes": 20388
+  },
+  {
+    "layer": "0000",
+    "source": "芦苇5（竖版）_0000_芦苇5.png",
+    "output": "reed_portrait_front.webp",
+    "size": [
+      818,
+      1454
+    ],
+    "alpha_bbox": [
+      0,
+      1195,
+      241,
+      1454
+    ],
+    "bytes": 41226
+  }
+]
