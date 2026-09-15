@@ -285,6 +285,27 @@
   .pdetail .overview span{ font-family:"Jost","Noto Serif SC",sans-serif; font-size:.64rem; letter-spacing:.08em;
     color:var(--soft); background:var(--chip-bg); border:1px solid var(--card-line); border-radius:999px; padding:.34em .72em; }
   .pdetail .overview .pending{ border-style:dashed; }
+  /* v13.1 体验调查（横格纸，默认折叠，点标题展开/收起） */
+  .pdetail .survey{ margin-top:1.45rem; }
+  .pdetail .survey-head{ display:flex; align-items:baseline; gap:.7rem; padding:.2rem 0 .5rem; border-bottom:1px solid var(--card-line);
+    font-family:"Jost","Noto Serif SC",sans-serif; font-size:.64rem; letter-spacing:.14em; color:var(--soft);
+    cursor:pointer; list-style:none; user-select:none; }
+  .pdetail .survey-head::-webkit-details-marker{ display:none; }
+  .pdetail .survey-head .n{ color:var(--ink); letter-spacing:.06em; }
+  .pdetail .survey-head .tog{ margin-left:auto; position:relative; width:.9em; height:.9em; align-self:center; }
+  .pdetail .survey-head .tog::before,.pdetail .survey-head .tog::after{ content:""; position:absolute; left:0; top:50%; width:100%; height:1px; background:var(--soft); transition:transform .25s ease; }
+  .pdetail .survey-head .tog::after{ transform:rotate(90deg); }
+  .pdetail .survey[open] .survey-head .tog::after{ transform:rotate(0deg); }
+  .pdetail .survey-head:hover .n{ color:var(--sage); }
+  .pdetail .survey-head:focus-visible{ outline:1px dashed var(--sage); outline-offset:4px; }
+  .pdetail .survey-list{ margin:0; }
+  .pdetail .survey-list .row{ display:grid; grid-template-columns:5.8em 1fr; column-gap:.9rem; padding:.5rem 0; border-bottom:1px solid var(--line); }
+  .pdetail .survey-list dt{ font-size:.74rem; letter-spacing:.08em; line-height:1.95; color:var(--soft); }
+  .pdetail .survey-list dd{ font-size:.8rem; letter-spacing:.03em; line-height:1.95; color:#4a5047; }
+  @media(max-width:640px){
+    .pdetail .survey-list .row{ grid-template-columns:1fr; row-gap:.05rem; }
+    .pdetail .survey-list dt{ font-size:.66rem; }
+  }
   .pdetail .actions{ margin-top:1.7rem; display:flex; gap:.7rem; flex-wrap:wrap; }
   .pdetail .actions a{
     display:inline-block; padding:.72rem 1.25rem; border:1px solid rgba(44,49,41,.62); border-radius:999px;
@@ -554,7 +575,7 @@ h2{margin-bottom:2.2rem}
 <p>水镜是一处以塔罗为媒介的自我对话空间。有些事情已经发生，心里的感受却迟迟没有找到合适的语句安放。牌面的意象与文字，为这些感受留下了余地。那些说不清的思绪，可以从这里开始说起。</p>
 <p>从选择场景、抽出一张或三张牌，到慢慢读完解读，水镜邀请使用者观察当下的感受与处境。<span class="principle">“水镜不答来日。只鉴影，不断语。”</span>是它的内容原则：文字可以提示一种观看的角度，决定仍留给阅读的人。</p>
 <p>「绢」与「夜」两种界面、可开启的水声与涟漪，共同构成这段阅读的节奏。它希望留下一小段安静的时间。文字之间，也留着不必急于填满的空白。</p>
-<div class="overview"><span>4 个场景</span><span>78 张牌 · 624 段牌文</span><span>104 条引导语</span><span>绢 / 夜双肤</span></div><div class="actions"><a class="primary" href="./shuijing/index.html" target="_blank" rel="noopener" data-deploy="shuijing">在线体验</a></div>
+<div class="overview"><span>4 个场景</span><span>78 张牌 · 624 段牌文</span><span>104 条引导语</span><span>绢 / 夜双肤</span></div><details class="survey"><summary class="survey-head"><span>体验调查</span><span class="n">20 人</span><span class="tog" aria-hidden="true"></span></summary><dl class="survey-list"><div class="row"><dt>使用场合</dt><dd>闲暇消遣、关系或方向困惑时、想更了解自己</dd></div><div class="row"><dt>预测感</dt><dd>19 人未感到预测或指令感，1 人认为塔罗形式本身带引导</dd></div><div class="row"><dt>感受与帮助</dt><dd>多数认为提供了一种观察视角，4 人觉得内容偏普适</dd></div><div class="row"><dt>寻物场景</dt><dd>12 人认可方向，8 人存疑</dd></div><div class="row"><dt>再次使用</dt><dd>闲暇或心情平稳时</dd></div><div class="row"><dt>建议</dt><dd>前端更精致、app 或小程序、更多场景、手势抽牌</dd></div></dl></details><div class="actions"><a class="primary" href="./shuijing/index.html" target="_blank" rel="noopener" data-deploy="shuijing">在线体验</a></div>
 </div>
       </article>
 
@@ -571,7 +592,7 @@ h2{margin-bottom:2.2rem}
 <p>Shopping Together 从一句结账时的陪伴文案开始，逐渐长成了一间可以和搭子一起逛的虚拟超市。</p>
 <p>日常选择里，也有值得被看见的小事：又拿起了熟悉的饮料，想试试没吃过的零食，或者在预算边缘犹豫了一下。这里的搭子会注意到不同的细节，在合适的时候接上一句话。</p>
 <p>你可以让它安静看看，邀请它一起挑挑，或请它帮忙理理；也可以选择独自逛完。购物草稿与小票把一次选择留下来，方便日后回看。陪伴的分寸，由你决定。</p>
-<div class="overview"><span>3 位搭子 + 无搭子</span><span>11 个事件槽</span><span>36 席商品</span><span>81 条台词</span></div><div class="actions"><a class="primary" href="./shoppingtogether/index.html" target="_blank" rel="noopener" data-deploy="shoppingtogether">在线体验</a></div>
+<div class="overview"><span>3 位搭子 + 无搭子</span><span>11 个事件槽</span><span>36 席商品</span><span>81 条台词</span></div><details class="survey"><summary class="survey-head"><span>体验调查</span><span class="n">20 人</span><span class="tog" aria-hidden="true"></span></summary><dl class="survey-list"><div class="row"><dt>陪伴式购物</dt><dd>16 人认可，4 人认为购物应速战速决、并担心日后成为付费项</dd></div><div class="row"><dt>三位搭子</dt><dd>第三位最受喜欢，希望可选性更多</dd></div><div class="row"><dt>三档授权</dt><dd>多次体验后感觉重复度略高，希望文案储备更多</dd></div><div class="row"><dt>流畅度</dt><dd>网页端与手机端均顺畅，界面风格被认为有特色</dd></div><div class="row"><dt>再次使用</dt><dd>希望购物后能以卡片分享</dd></div><div class="row"><dt>建议</dt><dd>轻音效、搭子在节点发声</dd></div></dl></details><div class="actions"><a class="primary" href="./shoppingtogether/index.html" target="_blank" rel="noopener" data-deploy="shoppingtogether">在线体验</a></div>
 </div>
       </article>
     </div>
